@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LegramantiWeb!</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <div class="logo-container">
+          <img
+            src="imagens/minhalogo.png"
+            alt="Logo Pessoal de Bernardo Legramanti"
+            class="logo-faculdade"
+          />
+          <h1 class="logo">Meu Portfólio!</h1>
+        </div>
+        
+        <span id="welcome-message" class="welcome-text"></span>
+        
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Alternar tema claro/escuro">
+          💡
+        </button>
+
+        <button class="hamburger" aria-label="Abrir menu" id="hamburger-btn">
+          &#9776; </button>
+
+        <nav class="navbar" id="navbar">
+          <ul class="menu">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#projeto">Projetos</a></li>
+            <li><a href="#contato">Contato</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Bem-vindo(a) ao meu currículo digital!</h2>
+        <p>
+          Sou Bernardo Legramanti, um entusiasta da tecnologia e da inovação. Explore meu portfólio e saiba mais sobre meu trabalho!
+        </p>
+      </section>
+
+      <section id="sobre" class="section">
+        <h2 class="section-title">Sobre Mim</h2>
+        <div class="sobre-content">
+          <img
+            src="imagens/minhaaimg.jpg"
+            alt="Foto de perfil de Bernardo Legramanti"
+            class="profile-img"
+          />
+          <div class="bio-text">
+            <p>
+              Olá, sou Bernardo Legramanti, um desenvolvedor apaixonado por tecnologia, design e inovação. Trabalhei com diversos projetos, e estou sempre em busca de novos desafios que me permitam crescer e compartilhar conhecimento.
+            </p>
+            <p>
+              Com um vasto interesse por desenvolvimento web, design UX/UI e soluções criativas, meu objetivo é construir experiências digitais únicas e funcionais.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="projeto" class="section">
+        <h2 class="section-title">Meus Projetos</h2>
+        <p class="section-subtitle">Veja abaixo alguns dos projetos que realizei:</p>
+        <div class="projetos-grid">
+          <div class="projeto-card">
+            <img src="imagens/ponteh.jpg" alt="Projeto de Ponte H" />
+            <h3>Projeto 1</h3>
+            <p>
+              Desenvolvimento de uma Ponte H, no qual é um circuito eletrônico com uma configuração em forma de "H" que controla o sentido de rotação e a velocidade de motores DC.
+            </p>
+          </div>
+          <div class="projeto-card">
+            <img src="imagens/casa.jpg" alt="Projeto de Maquete de Casa" />
+            <h3>Projeto 2</h3>
+            <p>
+              Eu e meus colegas criamos e elaboramos uma maquete de uma casa do 0! Utilizando diversos programas como Fusion Autodesk e inúmeras máquinas 3D e a Laser para conseguirmos dar vida a nossa casa
+            </p>
+          </div>
+          <div class="projeto-card">
+            <img src="imagens/projeto3.jpg" alt="Mini-Game em Python" />
+            <h3>Projeto 3</h3>
+            <p>
+             Este é o meu mais recente projeto feito. É uma **Useless Box**, que consiste em um dispositivo eletrônico cujo único propósito é se desligar. Ao ligar a chave, um motor é acionado para estender um braço mecânico ou dedo que desliga a chave novamente de forma instantânea. Este projeto uniu eletrônica, programação básica como Arduino, e design de caixa/mecanismo, sendo um ótimo exercício de lógica de sistemas e construção de hardware interativo, resultando em uma peça divertida e intrigante.
+          </div>
+        </div>
+      </section>
+
+      <section id="contato" class="section">
+        <h2 class="section-title">Contato</h2>
+        <p class="section-subtitle">Conecte-se comigo!</p>
+        
+        <form class="form-contato" id="contact-form">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Seu Nome" required aria-label="Seu Nome">
+                <div class="error-message" id="name-error"></div>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" placeholder="Seu E-mail" required aria-label="Seu E-mail">
+                <div class="error-message" id="email-error"></div>
+            </div>
+
+            <div class="form-group">
+                <textarea id="message" name="message" placeholder="Sua Mensagem" rows="5" required aria-label="Sua Mensagem"></textarea>
+                <div class="error-message" id="message-error"></div>
+            </div>
+
+            <button type="submit" class="btn-submit">Enviar Mensagem</button>
+            <div id="success-message" class="alert-success"></div>
+        </form>
+
+        <div class="social-buttons">
+          <a href="https://www.instagram.com/b.legramanti" target="_blank" class="social-btn instagram-btn" aria-label="Instagram de Bernardo Legramanti">Instagram</a>
+          <a href="https://www.linkedin.com/in/b-legramanti" target="_blank" class="social-btn linkedin-btn" aria-label="LinkedIn de Bernardo Legramanti">LinkedIn</a>
+          <a href="https://github.com/seu-usuario" target="_blank" class="social-btn github-btn" aria-label="GitHub de Bernardo Legramanti">GitHub</a>
+          <a href="mailto:legramanti7b@gmai.com" class="social-btn email-btn" aria-label="Enviar email para Bernardo Legramanti">Email</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>© 2025 - Bernardo Legramanti | Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
