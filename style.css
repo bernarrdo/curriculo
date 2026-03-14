@@ -303,25 +303,35 @@ body {
     height: 1.1rem; /* Garante espaço para a mensagem, evitando "pulos" */
 }
 
-/* Mensagem de Sucesso (Adicional 6) */
+
+/* --- POP-UP DE SUCESSO--- */
 .alert-success {
+    position: fixed;
+    top: 20px;
+    right: 20px;
     background-color: #d4edda;
     color: #155724;
     border: 1px solid #c3e6cb;
-    padding: 0.75rem 1.25rem;
-    margin-top: 0.5rem;
+    padding: 1rem 1.5rem;
     border-radius: 8px;
-    text-align: center;
-    visibility: hidden; /* Controlado por JS */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    z-index: 10000;
+    display: none; /* Começa escondido */
     opacity: 0;
-    transition: opacity 0.3s, visibility 0.3s;
+    transition: opacity 0.3s ease;
 }
 
+/* Esta classe o JS vai ativar */
 .alert-success.show {
-    visibility: visible;
-    opacity: 1;
+    display: block !important;
+    opacity: 1 !important;
+    visibility: visible !important;
 }
 
+/* Correção para o Scroll Suave via CSS */
+html {
+    scroll-behavior: smooth;
+}
 .btn-submit {
   padding: 0.7rem 1.5rem;
   border: none;
@@ -433,7 +443,7 @@ body {
 }
 
 /* RESPONSIVIDADE (max-width: 768px - Telas pequenas/mobile) */
-@media (max-width: 768px) {
+@media (max-width: 768px){
     
   .header-content {
       flex-wrap: wrap;
@@ -513,5 +523,14 @@ body {
     
   .social-btn {
       width: 100%; /* Botões sociais ocupam toda a largura */
+
+      html {
+    scroll-behavior: smooth;
+}
+
+.alert-success.show {
+    visibility: visible;
+    opacity: 1;
+}
   }
 }
